@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proveedor de servicios</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <h2 class="nav__logo">ChacrasApp</h2>
+
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Inicio</a></li>
+          <li class="nav__item">
+            <a href="#" id="nav__links" class="nav__link">Nosotros</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Servicios</a>
+            <ul class="sub__menu">
+              <li class="nav__item">
+                <a href="#" class="nav__link">Electricista</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Gasista</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Plomería</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Contacto</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Regístrate</a>
+            <ul class="sub__menu">
+              <li class="nav__item">
+                <a href="Registro.html" class="nav__link">Proveedor</a>
+              </li>
+              <li class="nav__item">
+                <a href="Registro.html" class="nav__link">Usuario</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <figure class="nav__menu">
+          <img src="images/menu.svg" class="nav__icon" />
+        </figure>
+      </nav>
+
+      <section class="hero__main container">
+        <div class="hero__texts">
+          <h1 class="hero__title">
+            Contactate con los
+            <p>mejores proveedores</p>
+            de servicios.
+          </h1>
+        </div>
+        <!--<p class="hero__subtitle">
+            Let me hep you grow your business with CSS Grid
+          </p>
+
+          <a href="#" class="hero__cta">Join us!</a>
+        </div>
+
+        <figure class="hero__picture">
+          <img src="images/illustration.svg" class="hero__img" />
+        </figure> -->
+
+        <section class="testimony" id="Acerca">
+          <div class="testimony__container container">
+            <img
+              src="./images/leftarrow.png"
+              class="testimony__arrow"
+              id="before"
+            />
+
+            <section class="testimony__body testimony__body--show" data-id="1">
+              <div class="testimony__texts">
+                <h2 class="subtitlee">Electricista<br /></h2>
+              </div>
+
+              <figure class="testimony__picture">
+                <img src="./images/electricista.jpg" class="testimony__img" />
+              </figure>
+            </section>
+
+            <section class="testimony__body" data-id="2">
+              <div class="testimony__texts">
+                <h2 class="subtitlee">Gasista<br /></h2>
+              </div>
+
+              <figure class="testimony__picture">
+                <img src="./images/gasista.jpg" class="testimony__img" />
+              </figure>
+            </section>
+
+            <section class="testimony__body" data-id="3">
+              <div class="testimony__texts">
+                <h2 class="subtitlee">Plomería<br /></h2>
+              </div>
+
+              <figure class="testimony__picture">
+                <img src="./images/plomeria.jpg" class="testimony__img" />
+              </figure>
+            </section>
+
+            <img
+              src="./images/rightarrow.png"
+              class="testimony__arrow"
+              id="next"
+            />
+          </div>
+        </section>
+      </section>
+      <div style="height: 150px; overflow: hidden" class="hero__waves">
+        <svg
+          viewBox="0 0 500 150"
+          preserveAspectRatio="none"
+          style="height: 100%; width: 100%"
+        >
+          <path
+            d="M0.00,49.99 C262.08,217.40 378.89,-120.09 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill: #fff"
+          ></path>
+        </svg>
+      </div>
+      <!-- SECCION SOBRE MI -->
+      <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+          <h2 a href="nav__links">¿Sabías que?</h2>
+          <p>
+            <span>Somos tres barrios cerrados</span> de la localidad de Chacras
+            de Coria en Mendoza, <br> 
+            que nos juntamos para formar una red de proveedores (Electricista,
+            Gasista, Plomería, etc.) </br> con la mejor calidad de profecionales del
+            lugar.
+          </p>
+        </div>
+      </section>
+    </header>
+    <div style="height: 200px; overflow: hidden" class="hero__waves">
+      <svg
+        viewBox="0 0 500 150"
+        preserveAspectRatio="none"
+        style="height: 100%; width: 100%"
+      >
+        <path
+          d="M0.00,49.99 C262.08,217.40 378.89,-120.09 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+          style="stroke: none; fill: #fff"
+        ></path>
+      </svg>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+  </body>
+</html>

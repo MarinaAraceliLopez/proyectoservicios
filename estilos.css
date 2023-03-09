@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  background-image: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  );
+  color: #fff;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas:
+    "nav"
+    "content";
+  min-height: 100vh;
+}
+
+.nav {
+  margin-bottom: 100px;
+  grid-area: nav;
+  display: grid;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  gap: 1em;
+  align-items: center;
+  height: 90px;
+}
+
+.nav__list {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1em;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__logo {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Urbanist", sans-serif;
+}
+
+.nav__menu {
+  display: none;
+}
+
+.sub__menu {
+  font-size: 13px;
+  position: absolute;
+  background: #1d3a6d;
+  width: 8%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+  border-radius: 8px;
+}
+
+.sub__menu li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-family: "Urbanist";
+  text-decoration: none;
+}
+
+.nav__list li:hover .sub__menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav__icon {
+  width: 30px;
+}
+
+/* Hero main */
+
+.hero__main {
+  grid-area: content;
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  align-content: stretch;
+  justify-content: end;
+  justify-items: center;
+  align-items: center;
+}
+
+.hero__waves {
+  margin-top: 90px;
+  padding-top: 80px;
+  grid-area: auto;
+  align-self: end;
+}
+
+.hero__title {
+  font-family: "Urbanist";
+  font-size: 2.5rem;
+}
+
+.hero__title p {
+  font-size: 2.5rem;
+  color: #f7c34a;
+}
+
+.hero__subtitle {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Testimony */
+
+.subtitlee {
+  padding: 10px 0;
+  font-size: 1.5rem;
+}
+
+.testimony {
+  justify-content: center;
+  text-align: center;
+}
+
+.testimony__container {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  gap: 1em;
+  align-items: center;
+}
+
+.testimony__body {
+  grid-template-columns: 1fr max-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.testimony__body--show {
+  pointer-events: unset;
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.testimony__img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.testimony__texts {
+  max-width: 700px;
+}
+
+.testimony__course {
+  background-color: royalblue;
+  color: #fff;
+  display: inline-block;
+  padding: 5px;
+}
+
+.testimony__arrow {
+  width: 90%;
+  cursor: pointer;
+}
+/*Sección sobre mi (la app)*/
+.sobremi {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 80px 60px;
+  text-align: center;
+}
+.sobremi .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+.sobremi h2 {
+  font-size: 48px;
+  font-family: "Urbanist";
+  text-align: center;
+  padding: 20px 0;
+}
+.sobremi .contenido-seccion p {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+.sobremi .contenido-seccion p span {
+  color: #ebba51;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .nav__list {
+    display: none;
+  }
+
+  .nav__menu {
+    display: block;
+  }
+
+  .hero__main {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content;
+    text-align: center;
+  }
+
+  .hero__picture {
+    grid-row: 1/2;
+  }
+
+  .hero__img {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .modal__container {
+    padding: 2em 1.5em;
+  }
+
+  .modal__title {
+    font-size: 2rem;
+  }
+}
