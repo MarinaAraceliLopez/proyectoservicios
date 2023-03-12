@@ -4,10 +4,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Urbanist", sans-serif;
 }
 
-body {
-  font-family: "Urbanist", sans-serif;
+.img_body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.img_body_fondo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .container {
@@ -29,23 +41,6 @@ body {
   grid-template-areas:
     "nav"
     "content";
-}
-
-/* Nav */
-
-body {
-  background-image: url(../images/fondoPlomeria2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  font-family: "Urbanist", sans-serif;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .nav__logo {
@@ -82,10 +77,11 @@ body {
 /*Tipografia menu*/
 .navbar .nav-links a {
   font-family: "Urbanist", sans-serif;
-  padding: 10px 12px;
+  padding: 20px 12px;
   text-decoration: none;
   color: white;
   border-radius: 6px;
+  font-size: 13px;
 }
 /* Hover effects */
 .navbar .nav-links a:hover {
@@ -163,7 +159,7 @@ body {
   .navbar .nav-links .loginBtn {
     padding: 10px 40px;
     margin: 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: "Urbanist", sans-serif;
     color: rgb(255, 255, 255);
   }
@@ -230,190 +226,174 @@ body {
   margin-left: 15px;
 }
 
-/* Hero main */
+main {
+  height: 90px;
+  width: 100%;
+  margin: auto;
+  margin-top: 170px;
+}
 
-.hero__main__container {
-  background-color: #1e3c72;
-  grid-area: content;
-  display: grid;
-  gap: 0.5em;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-content: stretch;
-  justify-content: center;
-  justify-items: center;
+.contenedor__todo {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: -950px;
+  position: relative;
   text-align: center;
-  color: #fff;
-  height: 600px;
+  justify-content: center;
 }
 
-.hero__waves {
-  margin-top: -100px;
-  grid-area: auto;
-  align-self: end;
+.caja__trasera {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #244583;
+  border-radius: 10px;
+  justify-content: space-between;
 }
 
-.hero__title {
-  font-family: "Urbanist";
-  font-size: 2.5rem;
-  margin: 170px 0;
+.caja__trasera div {
+  margin: 100px 0 100px 50px;
+  color: white;
+  transition: all 500ms;
+  text-align: center;
+  justify-content: center;
 }
 
-.hero__title p {
-  font-size: 2.5rem;
-  color: #f7c34a;
+.caja__trasera div p,
+.caja__trasera button {
+  margin-top: 30px;
+  text-align: center;
+  justify-content: center;
+  margin-right: 40px;
 }
 
-.hero__subtitle {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+.caja__trasera div h3 {
+  text-align: justify;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.caja__trasera div p {
+  font-size: 16px;
   font-weight: 300;
 }
 
-/* Testimony */
-
-.subtitlee {
-  padding: 10px 0;
-  font-size: 1.5rem;
-}
-
-.testimony {
-  justify-content: center;
-  text-align: center;
-}
-
-.testimony__container {
-  display: grid;
-  grid-template-columns: 50px 1fr 50px;
-  gap: 1em;
-  align-items: center;
-}
-
-.testimony__body {
-  margin: 120px 0;
-  grid-template-columns: 1fr max-content;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2em;
-  grid-column: 2/3;
-  grid-row: 1/2;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.testimony__body--show {
-  pointer-events: unset;
-  opacity: 1;
-  transition: opacity 1.5s ease-in-out;
-}
-
-.testimony__img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 30%;
-}
-
-.testimony__texts {
-  max-width: 700px;
-}
-
-.testimony__course {
-  background-color: royalblue;
-  color: #fff;
-  display: inline-block;
-  padding: 5px;
-}
-
-.testimony__arrow {
-  width: 90%;
+.caja__trasera button {
+  padding: 10px 40px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  background: transparent;
+  font-weight: 600;
   cursor: pointer;
-}
-/*Sección sobre mi (la app)*/
-.sobremi {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 80px 60px;
-  text-align: center;
-}
-.sobremi .contenido-seccion {
-  max-width: 1100px;
-  margin: auto;
-}
-.sobremi h2 {
-  font-size: 48px;
-  font-family: "Urbanist";
-  text-align: center;
-  padding: 20px 0;
-}
-.sobremi .contenido-seccion p {
-  font-size: 20px;
-  line-height: 25px;
-  margin-bottom: 40px;
-}
-.sobremi .contenido-seccion p span {
-  color: #ebba51;
-  font-weight: bold;
+  color: white;
+  outline: none;
+  transition: all 300ms;
 }
 
-@media (max-width: 800px) {
-  .nav__menu {
-    display: block;
+.caja__trasera button:hover {
+  background: #fff;
+  color: #46a2fd;
+}
+
+/*Formularios*/
+
+.contenedor__login-register {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+  top: -185px;
+  left: 10px;
+  text-align: center;
+
+  /*La transicion va despues del codigo JS*/
+  transition: left 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contenedor__login-register form {
+  width: 100%;
+  padding: 80px 20px;
+  background: white;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.contenedor__login-register form h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #46a2fd;
+}
+
+.contenedor__login-register form input {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 16px;
+  outline: none;
+}
+
+.contenedor__login-register form button {
+  padding: 10px 40px;
+  margin-top: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  background: #46a2fd;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  justify-content: center;
+}
+
+.formulario__login {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  font-size: 1rgb (255, 255, 255);
+  outline: none;
+  padding: 10px 0;
+}
+.formulario__register {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  main {
+    margin-top: 50px;
   }
 
-  .nav__link--menu {
-    position: fixed;
-    background-color: #2a5298;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
+  .caja__trasera {
+    max-width: 350px;
+    height: 300px;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: 100;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.7s opacity;
+    margin: auto;
   }
 
-  .nav__link--show {
-    --show: block;
-    opacity: 1;
-    pointer-events: unset;
-  }
-
-  .nav__close {
+  .caja__trasera div {
+    margin: 0px;
     position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 30px;
-    cursor: pointer;
   }
 
-  .hero__main {
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content max-content;
-    text-align: center;
+  /*Formularios*/
+
+  .contenedor__login-register {
+    top: -10px;
+    left: -5px;
+    margin: auto;
   }
 
-  .hero__picture {
-    grid-row: 1/2;
-  }
-
-  .hero__img {
-    max-width: 500px;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .modal__container {
-    padding: 2em 1.5em;
-  }
-
-  .modal__title {
-    font-size: 2rem;
+  .contenedor__login-register form {
+    position: relative;
   }
 }
